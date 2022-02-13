@@ -146,7 +146,7 @@ public class PleirControler : MonoBehaviour
         }
         else
         {
-            an.SetBool("N", false);
+            an.SetBool("N", false);   // плохая идея
             an.SetBool("L", false);
             if(speedTriger< speedUP)
                 an.SetBool("spid", true);
