@@ -62,17 +62,7 @@ public class PleirControler : MonoBehaviour
     public IEnumerator barerc()
     {
         barer();
-        yield return new WaitForSeconds(0.5f);
-        //SR.addi
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(5f);
         barer();
     }
 
