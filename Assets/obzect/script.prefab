@@ -15,7 +15,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8016652615026234310
 Transform:
@@ -43,31 +43,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9809195f91f5f644ab0191b53261817, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coral:
+  Coral:
   - {fileID: 1507135118876709159, guid: 32dc1f40946ecc0458d196c2fb5574c4, type: 3}
   - {fileID: 7807520305521565546, guid: 63a5b11360cca6046a2210985b5efa12, type: 3}
-  - {fileID: 1507135118876709159, guid: 32dc1f40946ecc0458d196c2fb5574c4, type: 3}
-  coral3D:
+  Coral3D:
   - {fileID: 8120573135176207324, guid: a8629641e50aaa64c9f359575b4c58d7, type: 3}
   - {fileID: 5020678232424769019, guid: 398166280fb7085458943b2ce374a829, type: 3}
-  - {fileID: 8120573135176207324, guid: a8629641e50aaa64c9f359575b4c58d7, type: 3}
-  coralBooloto:
+  CoralSwamp:
   - {fileID: 980126918164642167, guid: d451ebccd1f71134d83ebb335441cf11, type: 3}
   - {fileID: 208829131351643583, guid: 8aa051c1cc4851842a80d878b3a6b636, type: 3}
-  - {fileID: 980126918164642167, guid: d451ebccd1f71134d83ebb335441cf11, type: 3}
-  supalsa1:
+  Tentacles1:
   - {fileID: 4282721307210682512, guid: 0e8c7bd309d6c044195124173ffc2bc1, type: 3}
-  supalsa2:
+  Tentacles2:
   - {fileID: 4198031523752309129, guid: ec7dcc4cc3a09ab438c6ed8298c90590, type: 3}
-  faerBoll:
-  - {fileID: 3361861095396588427, guid: 81a3c3bf072d6c04c91b7824f9033103, type: 3}
-  lodka:
-  - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
-  - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
-  - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
-  - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
-  - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
-  - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
+  Boat:
   - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
   - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
   - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
@@ -88,48 +77,48 @@ MonoBehaviour:
   - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
   - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
   - {fileID: 1507135118876709159, guid: 32dc1f40946ecc0458d196c2fb5574c4, type: 3}
-  lod:
+  Ice:
   - {fileID: 2630190126809765153, guid: 88fca578d12cfd846998437ab0967038, type: 3}
-  acul:
+  Shark:
   - {fileID: 5909285660663485322, guid: c4cbeec94adbf3f4490d9613aa53e09a, type: 3}
-  plus:
+  Bonus:
   - {fileID: 4422372125602555467, guid: 795516c4dd385d44ea1ca61d97ec2793, type: 3}
-  ut:
+  F4:
+  - {fileID: 4422372125602555467, guid: 795516c4dd385d44ea1ca61d97ec2793, type: 3}
+  - {fileID: 5909285660663485322, guid: c4cbeec94adbf3f4490d9613aa53e09a, type: 3}
+  - {fileID: 4198031523752309129, guid: ec7dcc4cc3a09ab438c6ed8298c90590, type: 3}
   - {fileID: 4282721307210682512, guid: 0e8c7bd309d6c044195124173ffc2bc1, type: 3}
   - {fileID: 3361861095396588427, guid: 81a3c3bf072d6c04c91b7824f9033103, type: 3}
   - {fileID: 1507135118876709159, guid: 32dc1f40946ecc0458d196c2fb5574c4, type: 3}
+  - {fileID: 8120573135176207324, guid: a8629641e50aaa64c9f359575b4c58d7, type: 3}
   - {fileID: 980126918164642167, guid: d451ebccd1f71134d83ebb335441cf11, type: 3}
   - {fileID: 7807520305521565546, guid: 63a5b11360cca6046a2210985b5efa12, type: 3}
+  - {fileID: 5020678232424769019, guid: 398166280fb7085458943b2ce374a829, type: 3}
   - {fileID: 208829131351643583, guid: 8aa051c1cc4851842a80d878b3a6b636, type: 3}
   - {fileID: 7340926831330767762, guid: 4d54611077d638249a616ddb82d92af9, type: 3}
-  - {fileID: 4422372125602555467, guid: 795516c4dd385d44ea1ca61d97ec2793, type: 3}
-  - {fileID: 1114532517332084990, guid: a9f7306e91360724589eca3680c7b73a, type: 3}
-  boos:
+  boss:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  pleir: {fileID: 0}
-  granisa: 65
-  smemeniaPleir: 80
-  rasto: 10
-  rastoLin: 20
-  rastoCaral: 20
-  rastoSupols: 40
-  rastoLdom: 12.5
-  rastoAcul: 50
-  smemeniaLdom: 5
-  nrosentPlus: 1
-  ySmesenia: 10
-  speedUPDEIT: 5
-  dell: []
-  smes: 50
+  Player: {fileID: 0}
+  Border: 65
+  OffPlayer: 80
+  Distance: 10
+  DistanceLine: 20
+  DistanceCoral: 20
+  DistanceTentacles: 40
+  DistanceIce: 12.5
+  DistanceShark: 50
+  OffIce: 5
+  BonusChance: 1
+  YOff: 10
+  SpeedUpdate: 5
+  Interval: 50
   RaznesaSUPS: 2
-  claster: 30
-  utT: 0
-  andeoid: 1
-  andeoidPlei: {fileID: 0}
-  PleirControl: {fileID: 0}
+  Cluster: 30
+  Android: 1
+  AndroidPlei: {fileID: 0}
   cameraCon: {fileID: 0}
   buton: {fileID: 0}
   paus: {fileID: 0}
@@ -146,5 +135,5 @@ MonoBehaviour:
   fpsO: {fileID: 0}
   anVolna: {fileID: 0}
   cam: {fileID: 0}
-  ppV: {fileID: 0}
-  ppL: {fileID: 0}
+  PPV: {fileID: 0}
+  PPL: {fileID: 0}

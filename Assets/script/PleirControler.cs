@@ -4,27 +4,24 @@ using UnityEngine;
 
 public class PleirControler : MonoBehaviour
 {
-    public float speedUPS = 1;
-    public float speedS = 1;
-    public static float speed = 20;
-    public static float speedUP = 20;
+    public float speed = 20;
+    public float speedUP = 20;
     public float speedTriger = 30;
     public static float granisa = 65;
     public float granisaS = 65;
     public Animator an;
     public GameObject smert;
 
-    public spavnCoral spavnCor;
+    public SpawnCoral spavnCor;
     public cameraControler cameraCon;
     private SpriteRenderer SR;
 
     private void Awake()
     {
-        speedUP = speedUPS;
-        speed = speedS;
         granisa = granisaS;
         SR = GetComponent<SpriteRenderer>();
     }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "scola")
@@ -113,8 +110,6 @@ public class PleirControler : MonoBehaviour
     {
         N = false;
     }
-
-
 
     void FixedUpdate()
     {

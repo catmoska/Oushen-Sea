@@ -3145,6 +3145,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 7340926831330767761, guid: 0aef5949e51760c46a98c12cf01e16a1, type: 3}
+      propertyPath: speedUP
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7340926831330767761, guid: 0aef5949e51760c46a98c12cf01e16a1, type: 3}
       propertyPath: spavnCor
       value: 
       objectReference: {fileID: 260894987}
@@ -3214,17 +3218,17 @@ PrefabInstance:
       value: script
       objectReference: {fileID: 0}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: cam
-      value: 
-      objectReference: {fileID: 519420028}
-    - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: ppL
+      propertyPath: PPL
       value: 
       objectReference: {fileID: 519420033}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: ppV
+      propertyPath: PPV
       value: 
       objectReference: {fileID: 519420034}
+    - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 519420028}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
       propertyPath: psF
       value: 
@@ -3246,13 +3250,13 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1207624131}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: pleir
-      value: 
-      objectReference: {fileID: 1068457321}
-    - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
       propertyPath: textt
       value: 
       objectReference: {fileID: 732081347}
+    - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
+      propertyPath: Player
+      value: 
+      objectReference: {fileID: 1068457321}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
       propertyPath: textt2
       value: 
@@ -3270,27 +3274,23 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 519420030}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: andeoidPlei
+      propertyPath: AndroidPlei
       value: 
       objectReference: {fileID: 1070710943}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: PleirControl
-      value: 
-      objectReference: {fileID: 1068457322}
-    - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: boos.Array.data[0]
+      propertyPath: boss.Array.data[0]
       value: 
       objectReference: {fileID: 851758756}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: boos.Array.data[1]
+      propertyPath: boss.Array.data[1]
       value: 
       objectReference: {fileID: 738237153}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: boos.Array.data[2]
+      propertyPath: boss.Array.data[2]
       value: 
       objectReference: {fileID: 1464514794}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
-      propertyPath: boos.Array.data[3]
+      propertyPath: boss.Array.data[3]
       value: 
       objectReference: {fileID: 259589748}
     - target: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
