@@ -4,22 +4,25 @@ using UnityEngine;
 
 public class PleirControler : MonoBehaviour
 {
-    public float speed = 20;
-    public float speedUP = 20;
-    public float speedTriger = 30;
-    public static float granisa = 65;
-    public float granisaS = 65;
-    public Animator an;
-    public GameObject smert;
+    public float Speed = 20;//speed
+    public float SpeedUP = 20;//speedUP
+    public float SpeedTrigger = 30;//speedTriger
+    public static float Boundary = 65;//granisa
+    public float BoundaryS = 65;//granisaS
+    private Animator AN;//an
+    public GameObject Death;//smert
 
-    public SpawnCoral spavnCor;
-    public cameraControler cameraCon;
-    private SpriteRenderer SR;
+    public SpawnCoral SpawnCoral;//spavnCor
+    public CameraControler cameraCon;//cameraCon
 
     private void Awake()
     {
-        granisa = granisaS;
-        SR = GetComponent<SpriteRenderer>();
+        Boundary = BoundaryS;
+    }
+
+    private void Start()
+    {
+        AN = GetComponent<Animator>();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -40,8 +43,8 @@ public class PleirControler : MonoBehaviour
     private void Res1()
     {
         cameraCon.enabled = false;
-        Instantiate(smert, transform.position, Quaternion.identity);
-        spavnCor.Res2();
+        Instantiate(Death, transform.position, Quaternion.identity);
+        SpawnCoral.Res2();
     }
 
 
@@ -69,17 +72,11 @@ public class PleirControler : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {
             if (Input.GetKeyDown(KeyCode.F6))
-            {
                 barer();
-            }
             if (Input.GetKeyDown(KeyCode.F7))
-            {
-                speedUP -= 10;
-            }
+                SpeedUP -= 10;
             else if (Input.GetKeyDown(KeyCode.F8))
-            {
-                speedUP += 10;
-            }
+                SpeedUP += 10;
         }
     }
 
@@ -121,30 +118,30 @@ public class PleirControler : MonoBehaviour
 
         float xMov = Input.GetAxisRaw("Horizontal");
         float xMovi = nirm(xMov + xMovv);
-        transform.Translate(Vector2.right * xMovi * speed * Time.deltaTime);
-        transform.Translate(Vector2.up * (speedUP - Math.Abs(xMovi) * (speedUP / 20)) * Time.deltaTime);
+        transform.Translate(Vector2.right * xMovi * Speed * Time.deltaTime);
+        transform.Translate(Vector2.up * (SpeedUP - Math.Abs(xMovi) * (SpeedUP / 20)) * Time.deltaTime);
 
-        if (Math.Abs(transform.position.x) > granisa)
+        if (Math.Abs(transform.position.x) > Boundary)
         {
             Res1();
         }
 
         if (xMovi > 0)
         {
-            an.SetBool("N", true);
-            an.SetBool("L", false);
+            AN.SetBool("N", true);
+            AN.SetBool("L", false);
         }
         else if (xMovi < 0)
         {
-            an.SetBool("L", true);
-            an.SetBool("N", false);
+            AN.SetBool("L", true);
+            AN.SetBool("N", false);
         }
         else
         {
-            an.SetBool("N", false);   // плохая идея
-            an.SetBool("L", false);
-            if(speedTriger< speedUP)
-                an.SetBool("spid", true);
+            AN.SetBool("N", false);   // плохая идея
+            AN.SetBool("L", false);
+            if(SpeedTrigger < SpeedUP)
+                AN.SetBool("spid", true);
         }
     }
 }

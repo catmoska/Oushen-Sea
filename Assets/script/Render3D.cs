@@ -1,22 +1,19 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Render3D : MonoBehaviour
 {
-    public Transform cam;
-    public float mnozetel = 20;
-    private BoxCollider2D bc;
-    private bool bcB;
-    private float dalnas = 20;
-    public float dalnasis;
+    public Transform Cam;
+    public float Mnozetel = 20;
+    private BoxCollider2D BC;
+    private bool BC_B;
+    public float Dalnast;
     private Render3D rD;
 
 
     void Start()
     {
-        bc = GetComponent<BoxCollider2D>();
+        BC = GetComponent<BoxCollider2D>();
         rD = GetComponent<Render3D>();
     }
 
@@ -26,21 +23,20 @@ public class Render3D : MonoBehaviour
 
     void FixedUpdate()
     {
-        float dalnast = (float)Math.Sqrt(kvadr(cam.position.x - transform.position.x) + 
-            kvadr(cam.position.y - transform.position.y) + kvadr(cam.position.z - transform.position.z));
+        float dalnast = (float)Math.Sqrt(kvadr(Cam.position.x - transform.position.x) + 
+            kvadr(Cam.position.y - transform.position.y) + kvadr(Cam.position.z - transform.position.z));
 
-        dalnast = 1 / dalnast* mnozetel;
-        if (transform.position.y- cam.position.y < -5)
+        dalnast = 1 / dalnast* Mnozetel;
+        if (transform.position.y- Cam.position.y < -5)
         {
-            bc.enabled = false;
-            bcB = true;
+            BC.enabled = false;
+            BC_B = true;
         }
-        if (bcB && dalnast> dalnasis)
+        if (BC_B && dalnast> Dalnast)
         {
             rD.enabled = false;
         }
 
-        dalnas = dalnast;
         transform.localScale = new Vector3(dalnast/1.3f, dalnast, 0);
     }
 

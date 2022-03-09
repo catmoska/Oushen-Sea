@@ -32,7 +32,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
     public float BonusChance = 5;//nrosentPlus
     public float YOff = 3;//ySmesenia
     public float SpeedUpdate = 5;//speedUPDEIT
-    private List<GameObject> Dell;//dell
+    public List<GameObject> Dell;//dell
     private float IntervalFromZero = 30;//o
     public float Interval = 30;//smes
     public float RaznesaSUPS = 2;//RaznesaSUPS
@@ -42,8 +42,8 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
     public bool Android;//andeoid
     public GameObject AndroidPlei;//andeoidPlei
 
-    private PleirControler PleirControle;//PleirControle
-    public cameraControler cameraCon;//cameraCon
+    public PleirControler PleirControle;//PleirControle
+    public CameraControler cameraCon;//cameraCon
     public GameObject buton;//buton
     public GameObject paus;//paus
     public GameObject pausB;//pausB
@@ -58,7 +58,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
     private Text fps;//fps
     public Animator anVolna;//anVolna
     public GameObject cam;//cam
-    private boos1 boos1;//boos1
+    private Boos1 boos1;//boos1
     private bool boos1B;//boos1B
     public PostProcessVolume PPV;//ppV
     public PostProcessLayer PPL;//ppL
@@ -88,14 +88,14 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         float y = u / 10;
         for (int i = 0; i < 10; i++)
         {
-            PleirControle.speedUP += y;
-            PleirControle.speed += y / RaznesaSUPS;
+            PleirControle.SpeedUP += y;
+            PleirControle.Speed += y / RaznesaSUPS;
             yield return new WaitForSeconds(0.5f);
         }
     }
 
     void spidEfect(float spid)
-    {psm.startSpeed = PleirControle.speed+spid+10;}
+    {psm.startSpeed = PleirControle.Speed + spid+10;}
 
 
     void sistka()
@@ -126,9 +126,9 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         {
             if (Dell[i].tag != "plus")
             {
-                supolso s = Dell[i].GetComponent<supolso>();
+                Supolso s = Dell[i].GetComponent<Supolso>();
                 if (s!=null)
-                    s.pleir = Player.GetComponent<Transform>();
+                    s.Pleir = Player.GetComponent<Transform>();
                 else
                 {
                     Debug.LogError("����� �� ����� ������� ������ 'spavnCoral/xuina()'");
@@ -144,7 +144,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
             if (Dell[i].tag != "plus")
             {
                 Render3D s = Dell[i].GetComponent<Render3D>();
-                s.cam = cam.GetComponent<Transform>();
+                s.Cam = cam.GetComponent<Transform>();
                 if (s == null)
                 {
                     Debug.LogError("����� �� ����� ������� ������ 'spavnCoral/xuina()'");
@@ -209,7 +209,8 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         {
             float c1 = UnityEngine.Random.Range(-Border, Border);
 
-            Dell.Add(Instantiate(Coral[UnityEngine.Random.Range(0, Coral.Count)],
+            Dell.Add(Instantiate(
+                Coral[UnityEngine.Random.Range(0, Coral.Count)],
                 new Vector2(c1, trans + OffPlayer + (i * DistanceCoral)),
                 Quaternion.Euler(new Vector2(0, vibar(0, 180)))));
 
@@ -333,7 +334,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
     public void spavn3(float trans)
     {
         IntervalFromZero += 100;
-        boos1 = boss[1].GetComponent<boos1>();
+        boos1 = boss[1].GetComponent<Boos1>();
         boos1.startt(Player.GetComponent<Transform>(), IntervalFromZero);
         boos1B = true;
     }
@@ -375,7 +376,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         if (anVolna != null)
             for (int i = 1; i <= 2; i++)
                 anVolna.SetBool("biom" + i, false);
-        cameraControler cami = cam.GetComponent<cameraControler>();
+        CameraControler cami = cam.GetComponent<CameraControler>();
 
         cami.D = true;
         psm.startLifetime = 3.51f;

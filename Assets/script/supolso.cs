@@ -1,28 +1,28 @@
 using System;
 using UnityEngine;
 
-public class supolso : MonoBehaviour
+public class Supolso : MonoBehaviour
 {
-    public Transform pleir;
-    public float distons;
-    private Animator an;
+    public Transform Pleir;
+    public float Distons;
+    private Animator AN;
     private bool i;
-    private supolso skrit;
+    private Supolso Skrit;
 
     void Start()
     {
-        an = GetComponent<Animator>();
-        skrit = GetComponent<supolso>();
+        AN = GetComponent<Animator>();
+        Skrit = GetComponent<Supolso>();
     }
 
     void FixedUpdate()
     {
-        an.SetBool("blis", pleir != null && Math.Abs(pleir.position.y - transform.position.y) <= distons);
+        AN.SetBool("blis", Pleir != null && Math.Abs(Pleir.position.y - transform.position.y) <= Distons);
 
 
-        if (i && !(pleir != null && Math.Abs(pleir.position.y - transform.position.y) <= distons)) skrit.enabled = false;
+        if (i && !(Pleir != null && Math.Abs(Pleir.position.y - transform.position.y) <= Distons)) Skrit.enabled = false;
 
-        i = pleir != null && Math.Abs(pleir.position.y - transform.position.y) <= distons;
+        i = Pleir != null && Math.Abs(Pleir.position.y - transform.position.y) <= Distons;
 
     }
 }
