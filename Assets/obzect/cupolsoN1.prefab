@@ -116,10 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab230b6c38c746649b7a3e936aa1befa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pleir: {fileID: 0}
-  distons: 50
-  an: {fileID: 5791948951316622297}
-  skrit: {fileID: 155597294172892165}
+  Pleir: {fileID: 0}
+  Distons: 35
 --- !u!61 &1460754750977029559
 BoxCollider2D:
   m_ObjectHideFlags: 0

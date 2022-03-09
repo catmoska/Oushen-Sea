@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Rendering.PostProcessing;
 using System;
 
+
 public class SpawnCoral : MonoBehaviour         //spavnCoral
 {
     public List<GameObject> Coral;//coral
@@ -441,6 +442,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         PleirControle = Player.GetComponent<PleirControler>();
     }
 
+
     public void stopp()
     {
         if(Player != null)
@@ -526,7 +528,9 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
     {
         if (Player != null)
         {
-            textt2.text = ((int)Player.transform.position.y / 5).ToString();
+            textt2.text = ((((int)Player.transform.position.y / 5))>0?
+                ((int)Player.transform.position.y / 5):0
+                ).ToString();
             if (Distance + IntervalFromZero <= Player.transform.position.y)
             {
                 Distance = Player.transform.position.y;

@@ -142,5 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54216c1a27fd9704f93712679c72fe37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  mnozetel: 500
+  Cam: {fileID: 0}
+  Mnozetel: 450
+  Dalnast: 20

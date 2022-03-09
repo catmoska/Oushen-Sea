@@ -314,7 +314,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8016652615026234305, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
   m_PrefabInstance: {fileID: 8016652614816277194}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 8016652614816277195}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d9809195f91f5f644ab0191b53261817, type: 3}
@@ -452,7 +452,7 @@ MonoBehaviour:
   Smesenia: 26.79
   Smesenia3D: -13.47
   D: 1
-  Volna: {fileID: 0}
+  Volna: {fileID: 1512982229}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -1214,7 +1214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   obectt: 0
-  FairBool: {fileID: 0}
+  FairBool: {fileID: 3361861095396588427, guid: 81a3c3bf072d6c04c91b7824f9033103, type: 3}
   dell: []
 --- !u!95 &765250084 stripped
 Animator:
@@ -2265,6 +2265,11 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1512982229 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1242267528219603481, guid: b44810c959fb4fc4b9e9cea5109d65ea, type: 3}
+  m_PrefabInstance: {fileID: 1128760836784934038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1619297465
 GameObject:
   m_ObjectHideFlags: 0
@@ -2773,8 +2778,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 260894987}
-        m_TargetAssemblyTypeName: spavnCoral, Assembly-CSharp
-        m_MethodName: F4
+        m_TargetAssemblyTypeName: SpawnCoral, Assembly-CSharp
+        m_MethodName: FunctionF4
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3383,3 +3388,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
+--- !u!1 &8016652614816277195 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8016652615026234304, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
+  m_PrefabInstance: {fileID: 8016652614816277194}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8016652614816277196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8016652614816277195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6619e736fba41204ab8aea0b18d21bb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  testMode: 1

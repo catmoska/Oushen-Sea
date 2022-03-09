@@ -132,5 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab230b6c38c746649b7a3e936aa1befa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pleir: {fileID: 0}
-  distons: 13
+  Pleir: {fileID: 0}
+  Distons: 25
