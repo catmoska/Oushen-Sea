@@ -7,68 +7,69 @@ using UnityEngine.Rendering.PostProcessing;
 using System;
 
 
-public class SpawnCoral : MonoBehaviour         //spavnCoral
+public class SpawnCoral : MonoBehaviour
 {
-    public List<GameObject> Coral;//coral
-    public List<GameObject> Coral3D;//coral3D
-    public List<GameObject> CoralSwamp;//coralBooloto
-    public List<GameObject> Tentacles1;//supalsa1
-    public List<GameObject> Tentacles2;//supalsa2
-    public List<GameObject> Boat;//lodka
-    public List<GameObject> Ice;//lod
-    public List<GameObject> Shark;//acul
-    public List<GameObject> Bonus;//plus
-    public List<GameObject> F4;//ut
-    public List<GameObject> boss;//boos
-    public GameObject Player;//pleir
-    public float Border = 65;//granisa
-    public float OffPlayer = 80;//smemeniaPleir
-    public float Distance = 10;//rasto
-    public float DistanceLine = 10;//rastoLin
-    public float DistanceCoral = 10;//rastoCaral
-    public float DistanceTentacles = 10;//rastoSupols
-    public float DistanceIce = 10;//rastoLdom
-    public float DistanceShark = 10;//rastoAcul
-    public float OffIce = 10;//smemeniaLdom
-    public float BonusChance = 5;//nrosentPlus
-    public float YOff = 3;//ySmesenia
-    public float SpeedUpdate = 5;//speedUPDEIT
-    public List<GameObject> Dell;//dell
-    private float IntervalFromZero = 30;//o
-    public float Interval = 30;//smes
-    public float RaznesaSUPS = 2;//RaznesaSUPS
-    public int Cluster = 30;//claster
+    public List<GameObject> Coral;
+    public List<GameObject> Coral3D;
+    public List<GameObject> CoralSwamp;
+    public List<GameObject> Tentacles1;
+    public List<GameObject> Tentacles2;
+    public List<GameObject> Boat;
+    public List<GameObject> Ice;
+    public List<GameObject> Shark;
+    public List<GameObject> Bonus;
+    public List<GameObject> F4;
+    public List<GameObject> boss;
+    public GameObject Player;
+    public float Border = 65;
+    public float OffPlayer = 80;
+    public float Distance = 10;
+    public float DistanceLine = 10;
+    public float DistanceCoral = 10;
+    public float DistanceTentacles = 10;
+    public float DistanceIce = 10;
+    public float DistanceShark = 10;
+    public float OffIce = 10;
+    public float BonusChance = 5;
+    public float YOff = 3;
+    public float SpeedUpdate = 5;
+    public List<GameObject> Dell;
+    private float IntervalFromZero = 30;
+    public float Interval = 30;
+    public float RaznesaSUPS = 2;
+    public int Cluster = 30;
 
-    private bool F4B;//utT
-    public bool Android;//andeoid
-    public GameObject AndroidPlei;//andeoidPlei
+    private bool F4B;
+    public bool Android;
+    public GameObject AndroidPlei;
 
-    public PleirControler PleirControle;//PleirControle
-    public CameraControler cameraCon;//cameraCon
-    public GameObject buton;//buton
-    public GameObject paus;//paus
-    public GameObject pausB;//pausB
-    public List<GameObject> pausStop;//pausStop
-    public Text textt;//textt
-    public GameObject textt2G;//textt2G
-    public Text textt2;//textt2
-    private bool stop;//stop
-    private ParticleSystem ps;//ps
-    public GameObject psF;//psF
-    public GameObject fpsO;//fpsO
-    private Text fps;//fps
-    public Animator anVolna;//anVolna
-    public GameObject cam;//cam
-    private Boos1 boos1;//boos1
-    private bool boos1B;//boos1B
-    public PostProcessVolume PPV;//ppV
-    public PostProcessLayer PPL;//ppL
-    private ParticleSystem.MainModule psm;//psm
-
-
+    public PleirControler PleirControle;
+    public CameraControler cameraCon;
+    public GameObject buton;
+    public GameObject paus;
+    public GameObject pausB;
+    public List<GameObject> pausStop;
+    public Text textt;
+    public GameObject textt2G;
+    public Text textt2;
+    private bool stop;
+    private ParticleSystem ps;
+    public GameObject psF;
+    public GameObject fpsO;
+    private Text fps;
+    public Animator anVolna;
+    public GameObject cam;
+    private Boos1 boos1;
+    private bool boos1B;
+    public PostProcessVolume PPV;
+    public PostProcessLayer PPL;
+    private ParticleSystem.MainModule psm;
+    private int tin = 0;
+    private Analtic analtic;
 
     public void reset()
     {
+        analtic.gemOv(textt.text, tin);
         SceneManager.LoadScene("SampleScene");
     }
 
@@ -380,35 +381,44 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         CameraControler cami = cam.GetComponent<CameraControler>();
 
         cami.D = true;
-        psm.startLifetime = 3.51f;
+        if(psF.activeInHierarchy)
+            psm.startLifetime = 3.51f;
 
-        if (F4B) 
-            spavnStandart(Distance, F4, OffPlayer, YOff, DistanceCoral, 0.5f,true);  // 0
+        if (F4B)
+            spavnStandart(Distance, F4, OffPlayer, YOff, DistanceCoral, 0.5f, true);  // 0
         else if (y == 0)
         {
+            tin = 1;
             boss[0].SetActive(true);
             spavn2(Distance); // kalmar
         }
         else if (y == 1)
         {
+            tin = 2;
             boss[1].SetActive(true);
             spavn3(Distance); // boss 1
         }
         else if (y == 2)
-            spavnStandart(Distance, Boat, OffPlayer, YOff, DistanceCoral, BonusChance, new Vector3(vibar(0,180),0,0)); // lodki
+        {
+            tin = 3;
+            spavnStandart(Distance, Boat, OffPlayer, YOff, DistanceCoral, BonusChance, new Vector3(vibar(0, 180), 0, 0)); // lodki
+        }
         else if (y == 3)
         {
+            tin = 4;
             anVolna.SetBool("biom1", true);
             boss[2].SetActive(true);
             spavn4(Distance); // lod
         }
         else if (y == 4)
         {
+            tin = 5;
             anVolna.SetBool("biom2", true);
             spavnStandart(Distance, CoralSwamp, OffPlayer, YOff, DistanceCoral, BonusChance); // bolota
         }
         else if (y == 5)
         {
+            tin = 6;
             if (UnityEngine.Random.Range(0, 2) == 1)
                 anVolna.SetBool("biom2", true);
             boss[3].SetActive(true);
@@ -416,14 +426,18 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         }
         else if (y == 6)
         {
-            psm.startLifetime = 7f;
+            tin = 7;
+            if (psF.activeInHierarchy)
+                psm.startLifetime = 7f;
             cami.D = false;
             spavnStandart(Distance, Coral3D, OffPlayer, YOff, DistanceCoral, BonusChance, new Vector3(0, 0, 0)); //Coral3D
             xuina2();
         }
         else
+        {
+            tin = 0;
             spavn1(Distance);
-        
+        }
 
         if (w)
             yvi(SpeedUpdate);
@@ -434,12 +448,13 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
         Distance = Player.transform.position.y;
         spavn1(0);
         ps = psF.GetComponent<ParticleSystem>();
+        psm = ps.main;
         fps = fpsO.GetComponent<Text>();
 
         AndroidPlei.SetActive(Android);
         pausB.SetActive(Android);
-        psm = ps.main;
         PleirControle = Player.GetComponent<PleirControler>();
+        analtic = GetComponent<Analtic>();
     }
 
 
@@ -472,6 +487,7 @@ public class SpawnCoral : MonoBehaviour         //spavnCoral
     {
         PPV.enabled = !PPV.enabled;
         PPL.enabled = !PPL.enabled;
+        analtic.FooPP();
     }
 
     private void Update()

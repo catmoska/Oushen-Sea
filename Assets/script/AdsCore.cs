@@ -11,14 +11,16 @@ public class AdsCore : MonoBehaviour
 
     void Start()
     {
-        stop = GetComponent<SpawnCoral>();
-        Advertisement.Initialize(_gameId, _testMode);
-        StartCoroutine(adsss());
+        if (Random.Range(0, 10)==1) {
+            stop = GetComponent<SpawnCoral>();
+            Advertisement.Initialize(_gameId, _testMode);
+            StartCoroutine(adsss());
+        } 
     }
 
     public IEnumerator adsss() 
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         stop.stopp();
         Advertisement.Show("Interstitial_Android");
     }
