@@ -3230,6 +3230,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8016652614816277196, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
+      propertyPath: _testMode
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8016652615026234304, guid: 6539a58f3afad8c4a8c2c6596a2a4f6a, type: 3}
       propertyPath: m_Name
       value: script

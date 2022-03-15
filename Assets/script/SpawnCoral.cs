@@ -66,6 +66,7 @@ public class SpawnCoral : MonoBehaviour
     private ParticleSystem.MainModule psm;
     private int tin = 0;
     private Analtic analtic;
+    public AdsCore AdsCores;
 
     public void reset()
     {
@@ -358,6 +359,7 @@ public class SpawnCoral : MonoBehaviour
 
     public void respavn(float trans, bool w = true, int y = -100)
     {
+        AdsCores.rec();
         if (boos1B)
         {
             Dell = boos1.delll();
@@ -455,6 +457,7 @@ public class SpawnCoral : MonoBehaviour
         pausB.SetActive(Android);
         PleirControle = Player.GetComponent<PleirControler>();
         analtic = GetComponent<Analtic>();
+        AdsCores = GetComponent<AdsCore>();
     }
 
 
